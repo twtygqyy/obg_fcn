@@ -32,7 +32,9 @@ Here is the result so far:
 * [FCN-8s OBG-2s sbd]: mean IU 0.577085377376 on aug_val
 
 model link: 
-voc-fcn8s-obg2s.caffemodel: https://drive.google.com/open?id=0B5i4atpKg9EcRU9rb1lwd1VnTlE
-voc-fcn8s-obg4s.caffemodel: https://drive.google.com/open?id=0B5i4atpKg9EcU3U5Xy05Tm5kX0U
-voc-fcn8s-obg8s.caffemodel: https://drive.google.com/open?id=0B5i4atpKg9EcMWJXcFl5MGdwQ2c
+* [FCN-8s OBG-2s sbd]: voc-fcn8s-obg2s.caffemodel: https://drive.google.com/open?id=0B5i4atpKg9EcRU9rb1lwd1VnTlE
+* [FCN-8s OBG-4s sbd]: voc-fcn8s-obg4s.caffemodel: https://drive.google.com/open?id=0B5i4atpKg9EcU3U5Xy05Tm5kX0U
+* [FCN-8s OBG-8s sbd]: voc-fcn8s-obg8s.caffemodel: https://drive.google.com/open?id=0B5i4atpKg9EcMWJXcFl5MGdwQ2c
+
+
 There must be major bugs in the implementation since the performace decreased when combining pool2 and pool1 for object boundary.
