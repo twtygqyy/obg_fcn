@@ -8,23 +8,21 @@ import os
 import setproctitle
 setproctitle.setproctitle(os.path.basename(os.getcwd()))
 
-weights = 'train-no-bais_iter_416000.caffemodel'
+weights = 'voc-fcn8s-obg8s.caffemodel'
 
 # init
 caffe.set_device(int(sys.argv[1]))
 caffe.set_mode_gpu()
 
 solver = caffe.SGDSolver('solver.prototxt')
-#solver.net.copy_from(weights)
-solver.restore('train-no-bais_iter_20000.solverstate')
+solver.net.copy_from(weights)
 
 # surgeries
-#interp_layers = [k for k in solver.net.params.keys() if 'upscore8' in k]
-#surgery.interp(solver.net, interp_layers)
+interp_layers = [k for k in solver.net.params.keys() if 'up' in k]
+surgery.interp(solver.net, interp_layers)
 
-# surgeries
-#interp_layers = [k for k in solver.net.params.keys() if 'mask_projection' in k]
-#surgery.initial(solver.net, interp_layers)
+interp_layers = [k for k in solver.net.params.keys() if 'mask_projection' in k]
+surgery.initial(solver.net, interp_layers)
 
 
 # scoring

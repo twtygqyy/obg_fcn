@@ -15,7 +15,7 @@ sys.path.insert(0, caffe_root + 'python')
 import caffe
 
 caffe.set_mode_gpu()
-caffe.set_device(2)
+caffe.set_device(0)
 
 
 model_def = 'deploy.prototxt'
